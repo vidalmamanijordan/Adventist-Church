@@ -21,14 +21,15 @@
 					<td>${p.apeMat}</td>
 					<td>${p.nombre}</td>
 					<td><a href="#"
-						onclick="upeu.cargarUrl('miembros/editar?id=${p.id}')">[Edit]</a>
+						onclick="iasd.cargarUrl('miembros/editar?id=${p.id}')">[Edit]</a>
+						</td>
 				</tr>
 			</c:forEach>
 		</table>
 	</c:when>
 	<c:otherwise>
 		<p>
-			<a href="#" onclick="upeu.cargarUrl('miembros/nuevo')">+ Nuevo</a>
+			<a href="#" onclick="iasd.cargarUrl('miembros/nuevo')">+ Nuevo</a>
 		</p>
 		<div class="aviso">No se encontraron miembros</div>
 	</c:otherwise>

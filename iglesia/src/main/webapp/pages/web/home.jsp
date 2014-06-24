@@ -21,8 +21,7 @@
 			</nav>
 			<section>
 				<article id="contenido">
-					<img alt="Universidad Peruana Union" width="250"
-						src="resources/img/logo.png">
+					<img alt="Universidad Peruana Union" width="250">
 				</article>
 			</section>
 		</div>

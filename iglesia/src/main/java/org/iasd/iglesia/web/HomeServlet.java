@@ -1,4 +1,4 @@
-package org.iasd.iglesia.web.miembro;
+package org.iasd.iglesia.web;
 
 import java.io.IOException;
 import java.util.List;
@@ -12,25 +12,26 @@ import org.iasd.iglesia.service.MiembroService;
 import org.iasd.iglesia.service.impl.MiembroServiceImpl;
 import org.iasd.iglesia.web.form.MiembroForm;
 
-public class MiembroServlet extends HttpServlet {
+public class HomeServlet extends HttpServlet{
 	private static final long serialVersionUID = 1L;
-	private static final String VIEW_MAIN = "/pages/miembro/main.jsp";
+	private static final String VIEW_HOME = "/pages/home.jsp";
 	
 	MiembroService miembroService = new MiembroServiceImpl();
 	
-    public MiembroServlet() {
-        super();
-
-    }
-
-	protected void doGet(HttpServletRequest request, 
+	public HomeServlet(){
+		super();
+	}
+	
+	protected void doGet(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
-		List<MiembroForm> lista= miembroService.listar();
+		
+		List<MiembroForm> lista = miembroService.listar();
+		for(MiembroForm miembroForm : lista){
+			System.out.println(miembroForm.getNombre());
+		}
 		request.setAttribute("lp", lista);
-		request.getRequestDispatcher(VIEW_MAIN).forward(request, response);
+		
+		request.getRequestDispatcher(VIEW_HOME).forward(request, response);
 	}
-
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-	}
-
 }
+

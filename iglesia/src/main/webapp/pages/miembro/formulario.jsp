@@ -26,7 +26,7 @@
 	<p>
 		<input type="submit" value="Guardar">&nbsp;&nbsp;&nbsp;<input
 			type="button" value="Cancelar" onclick="upeu.cargarUrl('miembros');">
-		<c:if test="${not empty alumno.id}">
+		<c:if test="${not empty miembro.id}">
 			<input type="hidden" name="id" value="${miembro.id}">
 		</c:if>
 	</p>

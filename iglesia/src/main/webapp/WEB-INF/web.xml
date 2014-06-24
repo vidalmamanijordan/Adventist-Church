@@ -4,6 +4,12 @@
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
   <servlet>
+  	<servlet-name>HomeServlet</servlet-name>
+  	<display-name>HomeServlet</display-name>
+  	<description></description>
+  	<servlet-class>org.iasd.iglesia.web.HomeServlet</servlet-class>
+  </servlet>
+  <servlet>
   	<servlet-name>MisionServlet</servlet-name>
   	<display-name>MisionServlet</display-name>
   	<description></description>
@@ -34,10 +40,16 @@
   	<servlet-class>org.iasd.iglesia.web.miembro.MiembroServlet</servlet-class>
   </servlet>
   <servlet>
-  	<servlet-name>MiembroServlet</servlet-name>
-  	<display-name>MiembroServlet</display-name>
+  	<servlet-name>MiembroNuevoServlet</servlet-name>
+  	<display-name>MiembroNuevoServlet</display-name>
   	<description></description>
   	<servlet-class>org.iasd.iglesia.web.miembro.MiembroNuevoServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>MiembroEditarServlet</servlet-name>
+  	<display-name>MiembroEditarServlet</display-name>
+  	<description></description>
+  	<servlet-class>org.iasd.iglesia.web.miembro.MiembroEditarServlet</servlet-class>
   </servlet>
   <servlet>
   	<servlet-name>IngresarServelt</servlet-name>
@@ -48,6 +60,10 @@
   <servlet-mapping>
   	<servlet-name>MisionServlet</servlet-name>
   	<url-pattern>/mision</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>HomeServlet</servlet-name>
+  	<url-pattern>/home</url-pattern>
   </servlet-mapping>
   <servlet-mapping>
   	<servlet-name>VisionServlet</servlet-name>
@@ -66,7 +82,11 @@
   	<url-pattern>/miembros</url-pattern>
   </servlet-mapping>
   <servlet-mapping>
-  	<servlet-name>MiembroServlet</servlet-name>
+  	<servlet-name>MiembroEditarServlet</servlet-name>
+  	<url-pattern>/miembros/editar</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>MiembroNuevoServlet</servlet-name>
   	<url-pattern>/miembros/nuevo</url-pattern>
   </servlet-mapping>
   <servlet-mapping>
