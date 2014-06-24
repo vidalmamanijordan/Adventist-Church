@@ -1,0 +1,1 @@
+Cada miembro del cuerpo de Cristo preparado para el Reino de Dios.
